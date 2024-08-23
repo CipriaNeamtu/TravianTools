@@ -1,0 +1,97 @@
+/* Mixin flex v.0.0 */
+
+@mixin flex($align-items, $justify-content) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+@mixin flex-all($align-items, $justify-content, $flex-direction, $gap) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+	flex-direction: $flex-direction;
+	gap: $gap;
+}
+
+@mixin flexDirection($align-items, $justify-content, $flex-direction) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+	flex-direction: $flex-direction;
+}
+
+@mixin flex-align($align-items) {
+	display: flex;
+	align-items: $align-items;
+}
+
+@mixin flex-align-dir($align-items, $flex-direction) {
+	display: flex;
+	align-items: $align-items;
+	flex-direction: $flex-direction;
+}
+
+@mixin flex-align-gap($align-items, $gap) {
+	display: flex;
+	align-items: $align-items;
+	gap: $gap;
+}
+
+@mixin flex-dir-align-gap($flex-direction, $align-items, $gap) {
+	display: flex;
+	flex-direction: $flex-direction;
+	align-items: $align-items;
+	gap: $gap;
+}
+
+@mixin flex-align-just-gap($align-items, $justify-content, $gap) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+	gap: $gap;
+}
+
+@mixin flex-align-just($align-items, $justify-content) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+@mixin flex-justify($justify-content) {
+	display: flex;
+	justify-content: $justify-content;
+}
+
+@mixin flex-just-dir($justify-content, $flex-direction) {
+	display: flex;
+	justify-content: $justify-content;
+	flex-direction: $flex-direction;
+}
+
+@mixin flex-just-gap($justify-content, $gap) {
+	display: flex;
+	justify-content: $justify-content;
+	gap: $gap;
+}
+
+@mixin flex-direction($flex-direction) {
+	display: flex;
+	flex-direction: $flex-direction;
+}
+
+@mixin flex-inline($align-items, $justify-content) {
+	display: inline-flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+@mixin flex-gap($gap) {
+	display: flex;
+	gap: $gap;
+}
+
+@mixin flex-wrap($wrap) {
+	display: flex;
+	flex-wrap: $wrap;
+}

@@ -1,0 +1,5 @@
+@use '../flex' as *;
+
+.inline_alert_component {
+	@include flex-align-gap(center ,var(--space-4xs));
+}

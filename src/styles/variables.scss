@@ -1,0 +1,51 @@
+@use 'breakpoints' as *;
+
+:root {
+	/* SPACES */
+	--space-5xs: 2px;
+	--space-4xs: 4px;
+	--space-3xs: 8px;
+	--space-2xs: 12px;
+	--space-xs: 16px;
+	--space-sm: 20px;
+	--space-md: 24px;
+	--space-lg: 28px;
+	--space-xl: 32px;
+	--space-2xl: 36px;
+	--space-3xl: 40px;
+	--space-4xl: 44px;
+	--space-5xl: 48px;
+
+
+	--space-footer: 128px;
+	--mobile-menu-width: 240px;
+
+	/* LAYOUT */
+	--header-height: 80px;
+	--page-width: 1282px;
+	--page-width-sm: 960px;
+	--sidebar-width: 258px;
+	--sidebar-width-md: 384px;
+
+	/* FORMS */
+	--input-height: 44px;
+	--input-width-xs: 72px;
+	--input-width-sm: 96px;
+	--input-width: 276px;
+
+	/* CONTAINERS */
+	--ultra-mega-large-container: 2560px;
+	--mega-large-container: 1920px;
+	--extra-large-container: 1440px;
+	--large-container: 1200px;
+	--medium-container: 1024px;
+	--small-container: 768px;
+	--extra-small-container: 425px;
+	--ultra-small-container: 375px;
+
+	--vw: 1vw;
+
+	@include screen-mega-large {
+		--vw: 19.2px;
+	}
+}

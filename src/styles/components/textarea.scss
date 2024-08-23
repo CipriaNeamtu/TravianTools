@@ -1,0 +1,25 @@
+.textarea_component {
+	width: 100%;
+
+	textarea {
+		border: 0.5px solid var(--color-grey-catskill);
+		padding: var(--space-2xs) var(--space-xs);
+		margin-top: var(--space-5xs);
+		resize: none;
+		width: 100%;
+		
+
+		&:focus {
+			border: 0.5px solid var(--color-dodger-blue);
+			outline: none;
+		}
+
+		&.allow_resize {
+			resize: auto;
+		}
+
+		&.error {
+			border: 0.5px solid var(--color-radical-red);
+		}
+	}
+}

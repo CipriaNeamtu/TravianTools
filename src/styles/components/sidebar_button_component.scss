@@ -1,0 +1,18 @@
+@use '../flex' as *;
+@use '../breakpoints' as *;
+
+.sidebar_button_component {
+	width: 100%;
+	cursor: pointer;
+
+	&.selected { 
+		border-right: var(--space-4xs) solid var(--color-dodger-blue);
+	}
+
+	.sidebar_button_wrapper {
+		.icon_button_name {
+			@include flex-gap(var(--space-3xs));
+			margin-left: var(--space-2xs);
+		}
+	}
+}

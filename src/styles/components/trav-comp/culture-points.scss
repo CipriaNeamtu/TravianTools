@@ -1,0 +1,48 @@
+@use '../../flex' as *;
+@use '../../breakpoints' as *;
+
+.culture_points_component {
+	margin-top: var(--space-xl);
+
+	@include screen-mini {
+		overflow-x: auto;
+	}
+
+	.culture_points_table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 20px 0;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+		th,
+		td {
+			padding: 2px 6px;
+			text-align: center;
+			border: 1px solid #ddd;
+			font-size: 14px;
+
+			@include screen-mini {
+				font-size: 12px;
+			}
+		}
+
+		th {
+			background-color: #4CAF50;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		tr:hover {
+			background-color: var(--color-yellow-orange);
+		}
+
+		thead {
+			th {
+				padding: 4px 8px;
+			}
+		}
+	}
+
+}

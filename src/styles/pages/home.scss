@@ -1,0 +1,79 @@
+@use '../flex' as *;
+@use '../breakpoints' as *;
+
+.home_page {
+	@include flexDirection(center, center, column);
+
+	.home_hero_wrapper {
+		@include flex-justify(center);
+		width: 100%;
+		background-color: var(--color-cinder);
+
+		.home_hero {
+			@include flex-align(center);
+			width: var(--large-container);
+			background-color: var(--color-cinder);
+
+			@include screen-mini {
+				flex-direction: column;
+				margin: 0 var(--space-md);
+			}
+	
+			.hero_left {
+				width: 50%;
+
+				@include screen-mini {
+					width: 100%;
+				}
+	
+				.left_wrapper {
+					width: 554px;
+					padding: 112px 0;
+
+					@include screen-mini {
+						width: auto;
+						text-align: center;
+						padding: 112px 0 var(--space-md) 0;
+					}
+	
+					.description {
+						margin-top: var(--space-xs);
+					}
+	
+					.button_component {
+						margin-top: var(--space-md);
+					}
+				}
+			}
+	
+			.hero_right {
+				@include flex-justify(flex-end);
+				width: 50%;
+
+				@include screen-mini {
+					width: 60%;
+				}
+				
+				img {
+					width: 75%;
+
+					@include screen-mini {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	.content {
+		margin-bottom: 100px;
+	}
+
+	.info_cards {
+		margin-top: 70px;
+	}
+
+	.cards {
+		margin-top: 70px;
+	}
+}

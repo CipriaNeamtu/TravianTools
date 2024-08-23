@@ -1,0 +1,96 @@
+@use '../flex' as *;
+
+.input_component {
+	&.full_width {
+		width: 100%;
+	}
+
+	.input {
+		width: 282px;
+		height: 42px;
+		border-radius: var(--space-4xs);
+		border: 0.5px solid var(--color-grey-catskill);
+		background: var(--color-white);
+		padding: 11px var(--space-xs);
+		outline: none;
+		margin-top: var(--space-5xs);
+			
+		&:hover {
+			box-shadow: 0px 5px 20px 0px rgba(143, 142, 142, 0.5); 
+			border: 0.5px solid var(--color-dodger-blue);
+			outline: none;
+			transition: 0.2s;
+		}
+			
+		&:focus {
+			outline: 0.5px solid var(--color-dodger-blue);
+
+			&.error {
+				outline: 0.5px solid var(--color-radical-red);
+				border: none;
+			}
+	
+			&:hover {
+				border: none;
+			}
+		}
+		
+		&:active {
+			outline: 0.5px solid var(--color-dodger-blue);
+		}
+		
+		&.full_width {
+			width: 100%;
+		}
+
+		&.size {
+			&_sm {
+				width: 150px;
+			}
+
+			&_3xs {
+				width: 60px;
+			}
+			&_4xs {
+				width: 40px;
+			}
+			&_5xs {
+				width: 20px;
+			}
+		}
+		
+		&.no_border {
+			border: none;
+			background-color: transparent;
+			outline-color: transparent;
+			padding: unset;
+			color: var(--color-pacific-blue);
+			box-shadow: unset;
+			transition: unset;
+	
+			&::placeholder {
+				color: var(--color-pacific-blue);
+			}
+		}
+	
+		&.file {
+			display: none;
+		}
+
+		&.error {
+			border: 0.5px solid var(--color-radical-red);
+		}
+	}
+
+	.inline_alert_component {
+		margin-top: var(--space-4xs);
+	}
+}
+
+.photo_label {
+	@include flex-dir-align-gap(column, flex-start, var(--space-3xs));
+
+	label {
+		cursor: pointer;
+	}
+}

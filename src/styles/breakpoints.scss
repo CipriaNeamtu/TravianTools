@@ -1,0 +1,64 @@
+/* Device Breakpoints */
+
+$break-ms: 375px;	// Mega Small 
+$break-xs: 425px;	// Extra Small 
+$break-sm: 576px;	// Small 
+$break-md: 768px;	// Medium 
+$break-lg: 992px;	// Large
+$break-xl: 1200px;	// Extra Large 
+$break-2xl: 1400px;	// Mega Large 
+$break-3xl: 1900px;	// Extra Mega Large 
+
+/*=====================================================
+	Desktop-First + Mobile First Media Queries Approach
+=======================================================*/
+
+
+// Mega Small Mobile Devices: <= 375px
+@mixin screen-mega-small {
+	@media (max-width: $break-ms) { @content; }
+}
+
+// Extra Small Mobile Devices: <= 425px
+@mixin screen-extra-small {
+	@media (max-width: $break-xs) { @content; }
+}
+
+// Mobile devices: <= 576px (mobile)
+@mixin screen-mini {
+	@media (max-width: $break-sm) { @content; }
+}
+
+// Screens between Mobile & Tablet devices: <= 768px
+@mixin screen-small {
+	@media (max-width: $break-md) { @content; }
+}
+
+// Tablet devices: <= 992px (tablet)
+@mixin screen-medium {
+	@media (max-width: $break-lg) { @content; }
+}
+
+// Large devices: > 992px (desktop)
+@mixin screen-large {
+	@media (min-width: ($break-lg + 1)) { @content; }
+}
+
+// Large desktop devices: >= 1200px (desktop-large)
+@mixin screen-extra-large {
+	@media (min-width: $break-xl) { @content; }
+}
+
+// Mega Large desktop devices: >= 1400px
+@mixin screen-mega-large {
+	@media (min-width: $break-2xl) { @content; }
+}
+
+// Extra Mega Large desktop devices: >= 1900px
+@mixin screen-extra-mega-large {
+	@media (min-width: $break-3xl) { @content; }
+}
+
+/*==============
+	SCREENS ONLY
+================*/

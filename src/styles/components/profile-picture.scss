@@ -1,0 +1,38 @@
+@use '../flex' as *;
+
+.profile_picture_component {
+	@include flex-justify(center);
+	width: var(--space-3xl);
+	height: var(--space-3xl);
+	min-width: var(--space-3xl);
+	min-height: var(--space-3xl);
+	border-radius: 50%;
+	background-color: var(--color-white);
+	cursor: pointer;
+	overflow: hidden;
+	border: 2px solid var(--color-sunglow);
+
+	&.view_only {
+		cursor: unset;
+		user-select: none;
+
+		&_small {
+			width: 75px;
+			height: 75px;
+			min-width: 75px;
+			min-height: 75px;
+		}
+
+		&_medium {
+			width: 125px;
+			height: 125px;
+			min-width: 125px;
+			min-height: 125px;
+		}
+
+		&_large {
+			width: 200px;
+			height: 200px;
+		}
+	}
+}

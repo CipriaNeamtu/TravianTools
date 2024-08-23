@@ -1,0 +1,471 @@
+@use '../breakpoints' as *;
+
+.typography_component {
+	display: block;
+
+	// all elements inside the typography should inherit the typogrpahy styles
+	& > * {
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		color: inherit;
+		line-height: inherit;
+		letter-spacing: inherit;
+	}
+
+	&.inline {
+		display: inline;
+	}
+	&.inline-block {
+		display: inline-block;
+	}
+	&.link {
+		color: var(--color-primary-blue);
+		cursor: pointer;
+	}
+	&.underline {
+		text-decoration: underline;
+	}
+	&.italic {
+		font-style: italic;
+	}
+	&.line_through {
+		text-decoration: line-through;
+	}
+	&.uppercase {
+		text-transform: uppercase;
+	}
+	// Sequences of white space are collapsed. Lines are broken at newline characters.
+	&.multiline {
+		white-space: pre-line;
+	}
+	// Mark hidden overflow one line text with an ellipsis (...)
+	&.ellipsis {
+		max-width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		display: inline-block;
+	}
+	// Show pointer cursor for all button style typographies
+	&[class*="button_"] {
+		cursor: pointer;
+	}
+}
+
+@mixin font($size, $line, $weight, $letter, $color) {
+	font-size: $size;
+	line-height: $line;
+	font-weight: $weight;
+	letter-spacing: $letter;
+	color: $color;
+}
+
+/* For General Use 
+		12px - 2xs
+		14px - xs
+		16px - sm
+		18px - md
+		20px - lg
+		24px - xl
+		28px - 2xl
+		36px - 3xl
+		40px - 4xl
+	*/
+.typography_component {
+	&.white {
+		&_2xs {
+			@include font(12px, 18px, 400, 0px, var(--color-white));
+		}
+
+		&_xs {
+			@include font(14px, 21px, 400, 0px, var(--color-white));
+		}
+
+		&_sm {
+			@include font(16px, 25px, 400, 0px, var(--color-white));
+		}
+
+		&_md {
+			@include font(18px, 28px, 500, 0px, var(--color-white));
+		}
+
+		&_lg {
+			@include font(20px, 31px, 500, 0px, var(--color-white));
+		}
+
+		&_xl {
+			@include font(24px, 38px, 600, 0px, var(--color-white));
+		}
+
+		&_2xl {
+			@include font(28px, 44px, 600, 0px, var(--color-white));
+		}
+
+		&_3xl {
+			@include font(36px, 56px, 600, 0px, var(--color-white));
+		}
+		
+		&_4xl {
+			@include font(40px, 63px, 600, 0px, var(--color-white));
+		}
+	}
+
+	&.black {
+		&_2xs {
+			@include font(12px, 18px, 400, 0px, var(--color-big-stone));
+		}
+
+		&_xs {
+			@include font(14px, 21px, 400, 0px, var(--color-big-stone));
+		}
+
+		&_sm {
+			@include font(16px, 25px, 400, 0px, var(--color-big-stone));
+		}
+
+		&_md {
+			@include font(18px, 28px, 500, 0px, var(--color-big-stone));
+
+			@include screen-mini {
+				@include font(14px, 20px, 400, 0px, var(--color-big-stone));
+			}
+		}
+
+		&_lg {
+			@include font(20px, 31px, 500, 0px, var(--color-big-stone));
+		}
+
+		&_xl {
+			@include font(24px, 38px, 600, 0px, var(--color-big-stone));
+		}
+
+		&_2xl {
+			@include font(28px, 44px, 600, 0px, var(--color-big-stone));
+		}
+
+		&_3xl {
+			@include font(36px, 56px, 600, 0px, var(--color-big-stone));
+		}
+		
+		&_4xl {
+			@include font(40px, 63px, 600, 0px, var(--color-big-stone));
+		}
+	}
+
+	&.grey {
+		&_2xs {
+			@include font(12px, 18px, 400, 0px, var(--color-fiord));
+		}
+
+		&_xs {
+			@include font(14px, 21px, 400, 0px, var(--color-fiord));
+		}
+
+		&_sm {
+			@include font(16px, 25px, 400, 0px, var(--color-fiord));
+		}
+
+		&_md {
+			@include font(18px, 28px, 500, 0px, var(--color-fiord));
+		}
+
+		&_lg {
+			@include font(20px, 31px, 500, 0px, var(--color-fiord));
+		}
+
+		&_xl {
+			@include font(24px, 38px, 600, 0px, var(--color-fiord));
+		}
+
+		&_2xl {
+			@include font(28px, 44px, 600, 0px, var(--color-fiord));
+		}
+
+		&_3xl {
+			@include font(36px, 56px, 600, 0px, var(--color-fiord));
+		}
+		
+		&_4xl {
+			@include font(40px, 63px, 600, 0px, var(--color-fiord));
+		}
+	}
+
+	&.blue {
+		&_2xs {
+			@include font(12px, 18px, 400, 0px, var(--color-dodger-blue));
+		}
+
+		&_xs {
+			@include font(14px, 21px, 400, 0px, var(--color-dodger-blue));
+		}
+
+		&_sm {
+			@include font(16px, 25px, 400, 0px, var(--color-dodger-blue));
+		}
+
+		&_md {
+			@include font(18px, 28px, 500, 0px, var(--color-dodger-blue));
+		}
+
+		&_lg {
+			@include font(20px, 31px, 500, 0px, var(--color-dodger-blue));
+		}
+
+		&_xl {
+			@include font(24px, 38px, 600, 0px, var(--color-dodger-blue));
+		}
+
+		&_2xl {
+			@include font(28px, 44px, 600, 0px, var(--color-dodger-blue));
+		}
+
+		&_3xl {
+			@include font(36px, 56px, 600, 0px, var(--color-dodger-blue));
+		}
+		
+		&_4xl {
+			@include font(40px, 63px, 600, 0px, var(--color-dodger-blue));
+		}
+	}
+
+	&.light_blue {
+		&_2xs {
+			@include font(12px, 18px, 400, 0px, var(--color-echo-blue));
+		}
+
+		&_xs {
+			@include font(14px, 21px, 400, 0px, var(--color-echo-blue));
+		}
+
+		&_sm {
+			@include font(16px, 25px, 400, 0px, var(--color-echo-blue));
+		}
+
+		&_md {
+			@include font(18px, 28px, 500, 0px, var(--color-echo-blue));
+		}
+
+		&_lg {
+			@include font(20px, 31px, 500, 0px, var(--color-echo-blue));
+		}
+
+		&_xl {
+			@include font(24px, 38px, 600, 0px, var(--color-echo-blue));
+		}
+
+		&_2xl {
+			@include font(28px, 44px, 600, 0px, var(--color-echo-blue));
+		}
+
+		&_3xl {
+			@include font(36px, 56px, 600, 0px, var(--color-echo-blue));
+		}
+		
+		&_4xl {
+			@include font(40px, 63px, 600, 0px, var(--color-echo-blue));
+		}
+	}
+
+	&.red {
+		&_2xs {
+			@include font(12px, 18px, 400, 0px, var(--color-radical-red));
+		}
+
+		&_xs {
+			@include font(14px, 21px, 400, 0px, var(--color-radical-red));
+		}
+
+		&_sm {
+			@include font(16px, 25px, 400, 0px, var(--color-radical-red));
+		}
+
+		&_md {
+			@include font(18px, 28px, 500, 0px, var(--color-radical-red));
+		}
+
+		&_lg {
+			@include font(20px, 31px, 500, 0px, var(--color-radical-red));
+		}
+
+		&_xl {
+			@include font(24px, 38px, 600, 0px, var(--color-radical-red));
+		}
+
+		&_2xl {
+			@include font(28px, 44px, 600, 0px, var(--color-radical-red));
+		}
+
+		&_3xl {
+			@include font(36px, 56px, 600, 0px, var(--color-radical-red));
+		}
+		
+		&_4xl {
+			@include font(40px, 63px, 600, 0px, var(--color-radical-red));
+		}
+	}
+
+	&.green {
+		&_2xs {
+			@include font(12px, 18px, 400, 0px, var(--color-observatory));
+		}
+
+		&_xs {
+			@include font(14px, 21px, 400, 0px, var(--color-observatory));
+		}
+
+		&_sm {
+			@include font(16px, 25px, 400, 0px, var(--color-observatory));
+		}
+
+		&_md {
+			@include font(18px, 28px, 500, 0px, var(--color-observatory));
+		}
+
+		&_lg {
+			@include font(20px, 31px, 500, 0px, var(--color-observatory));
+		}
+
+		&_xl {
+			@include font(24px, 38px, 600, 0px, var(--color-observatory));
+		}
+
+		&_2xl {
+			@include font(28px, 44px, 600, 0px, var(--color-observatory));
+		}
+
+		&_3xl {
+			@include font(36px, 56px, 600, 0px, var(--color-observatory));
+		}
+		
+		&_4xl {
+			@include font(40px, 63px, 600, 0px, var(--color-observatory));
+		}
+	}
+
+	&.yellow {
+		&_2xs {
+			@include font(12px, 18px, 400, 0px, var(--color-sunglow));
+		}
+
+		&_xs {
+			@include font(14px, 21px, 400, 0px, var(--color-sunglow));
+		}
+
+		&_sm {
+			@include font(16px, 25px, 400, 0px, var(--color-sunglow));
+		}
+
+		&_md {
+			@include font(18px, 28px, 500, 0px, var(--color-sunglow));
+		}
+
+		&_lg {
+			@include font(20px, 31px, 500, 0px, var(--color-sunglow));
+		}
+
+		&_xl {
+			@include font(24px, 38px, 600, 0px, var(--color-sunglow));
+		}
+
+		&_2xl {
+			@include font(28px, 44px, 600, 0px, var(--color-sunglow));
+		}
+
+		&_3xl {
+			@include font(36px, 56px, 600, 0px, var(--color-sunglow));
+		}
+		
+		&_4xl {
+			@include font(40px, 63px, 600, 0px, var(--color-sunglow));
+		}
+	}
+	
+	/* For template - based on design - Figma  */
+	&.body {
+		/* White */
+		&_small_mm_white {
+			@include font(16px, 30px, 400, 0px, var(--color-white));
+		}
+		&_small_m_white {
+			@include font(16px, 35px, 400, 0px, var(--color-white));
+		}
+		&_medium_xs_white {
+			@include font(18px, 27px, 400, 0.2px, var(--color-white));
+		}
+		&_medium_s_white {
+			@include font(18px, 36.5px, 400, 0.2px, var(--color-white));
+		}
+		&_medium_mm_white {
+			@include font(20px, 30px, 500, 0px, var(--color-white));
+		}
+		&_medium_m_white {
+			@include font(20px, 61px, 500, 0.2px, var(--color-white));
+		}
+		&_medium_xl_white {
+			@include font(28px, 35px, 700, 0px, var(--color-white));
+		}
+		&_large_s_white {
+			@include font(36px, 32px, 600, 0.2px, var(--color-white));
+		}
+		&_large_white {
+			@include font(40px, 61px, 600, 0.2px, var(--color-white));
+
+			@include screen-mini {
+				@include font(32px, 52px, 600, 0.2px, var(--color-white));
+			}
+		}
+
+		&_small_m {
+			@include font(14px, 20px, 400, 0.2px, var(--color-regent-grey));
+		}
+		&_small_l {
+			@include font(16px, 25.6px, 400, 0px, var(--color-fiord));
+		}
+		&_medium_s {
+			@include font(18px, 27.9px, 400, 0px, var(--color-fiord));
+		}
+		&_medium_l {
+			@include font(24px, 36px, 500, 0px, var(--color-big-stone));
+		}
+		&_medium_xl {
+			@include font(28px, 42px, 500, 0px, var(--color-big-stone));
+		}
+		&_large {
+			@include font(40px, 61px, 600, 0.2px, var(--color-big-stone));
+		}
+	}
+
+	&.button {
+		&_small_s_white {
+			@include font(16px, 18px, 500, 0.3px, var(--color-white));
+		}
+		&_small_white {
+			@include font(18px, 19.5px, 500, 0.2px, var(--color-white));
+		}
+		&_small_blue {
+			@include font(14px, 32px, 500, 0.2px, var(--color-pacific-blue));
+		}
+		&_medium_white {
+			@include font(20px, 61px, 500, 0.2px, var(--color-white));
+		}
+	}
+
+	&.card {
+		&_small_green {
+			@include font(18px, 32px, 500, 0.2px, var(--color-mountain-meadow));
+		}
+		&_small_yellow {
+			@include font(18px, 32px, 500, 0.2px, var(--color-sunglow));
+		}
+		&_medium_blue {
+			@include font(32px, 48px, 600, 0px, var(--color-pacific-blue));
+		}
+		&_medium_green {
+			@include font(32px, 48px, 600, 0px, var(--color-java));
+		}
+		&_medium_red {
+			@include font(32px, 48px, 600, 0px, var(--color-radical-red));
+		}
+	}
+}

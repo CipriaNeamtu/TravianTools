@@ -1,0 +1,111 @@
+:root {
+	/* NEW */
+	--color-cinder: #1F2E35;
+	--color-big-stone: #333E44;
+	--color-fiord: #475E69;
+	--color-regent-grey: #737B7D;
+	--color-dim-grey: #666666;
+	--color-white-smoke: #F5F5F5;
+	--color-black-pearl: #1D292F;
+
+	--color-pacific-blue: #0086D6;
+	--color-solitude: #E1EBFB;
+	--color-dodger-blue: #0099FF;
+	--color-alice-blue: #F4F7FE;
+	--color-echo-blue: #A3AED0;
+
+	--color-java: #2BA093;
+	--color-mountain-meadow: #20C08B;
+	--color-observatory: #06856F;
+	
+	--color-radical-red: #FF3366;
+	--color-sunglow: #FFC942;
+	--color-tahiti-gold: #E16923;
+	--color-fiery-orange: #B4541C;
+	--color-yellow-orange: #FFAE42;
+
+	/* NEUTRAL LIGHT */
+	--color-grey-botticelli: #d3dde9;
+	--color-grey-athens: #e4e5e9;
+	--color-grey-catskill: #eaeef5;
+	--color-white-catskill: #f5f7fa;
+	--color-white: #FFFFFF;
+
+	/* NEUTRAL DARK */
+	--color-dark-blue-base: #003a61;
+	--color-dark-grey-bermuda: #738aa7;
+	--color-dark-grey-bali: #8ca0b3;
+	--color-dark-grey-cadet: #a7b2c3;
+
+	/* BLUES */
+	--color-primary-blue: #0099ff;
+	--color-secondary-blue: #d9ecff;
+	--color-blue-alice: #f3f9ff;
+	--color-blue-lochmara: #0383d9;
+	--color-light-blue-onahau: #c3e0ff;
+	--color-blue-cornflower: #325DED;
+	--color-blue-facebook: #3b67b8;
+	--color-blue-unbounce: #0033ff;
+
+	--color-purple-heart: #7D41DB;
+
+	/* REDS */
+	--color-red-mojo: #A61B27;
+	--color-red-carnation: #D63545;
+	--color-red-ferrari: #FF2800;
+	--color-pink-fair: #ffe9ea;
+	--color-pink-pippin: #ffd2da;
+	--color-red-cerise: #D4109C;
+	--color-pink-brink: #FC4C8B;
+
+	/* GREENS */
+	--color-green-niagara: #066B5A;
+	--color-green-caribbean: #06856F;
+	--color-iris-blue: #00BFB3;
+	--color-green-cosmos: #aaead7;
+
+	/* YELLOWS */
+	--color-yellow-sun: #EB7100;
+	--color-yellow-corn: #fee486;
+
+	/* TRANSPARENT */
+	--color-white-backdrop: rgba(255, 255, 255, 0.6);
+	--color-modal-backdrop: rgba(56, 59, 76, 0.75);
+
+	/* GRADIENTS */
+	--gradient-blue: linear-gradient(
+		to top,
+		var(--color-primary-blue) 0%,
+		var(--color-blue-cornflower) 100%
+	);
+	--gradient-blue-left: linear-gradient(
+		to left,
+		var(--color-primary-blue) 0%,
+		var(--color-blue-cornflower) 100%
+	);
+	--gradient-grey: linear-gradient(
+		to left,
+		var(--color-white) 0%,
+		var(--color-grey-botticelli) 100%
+	);
+	--gradient-catskill: linear-gradient(
+		to left,
+		var(--color-white) 0%,
+		var(--color-grey-catskill) 100%
+	);
+	--gradient-accent: linear-gradient(
+		to top,
+		var(--color-pink-brink) 0%,
+		var(--color-purple-heart) 100%
+	);
+
+	/* SHADOWS */
+	--elevation-1: 0 1px 3px 0 rgba(0, 58, 97, 0.2);
+	--elevation-2: 0 2px 10px 0 rgba(0, 58, 97, 0.2);
+	--elevation-3: 0 6px 20px 0 rgba(0, 58, 97, 0.2);
+	--elevation-4: 0 4px 20px 0 rgba(0, 58, 97, 0.15),
+		0 0 4px 0 rgba(0, 58, 97, 0.15);
+	--elevation-5: 0 4px 20px 0 rgba(0, 58, 97, 0.25),
+		0 0 4px 0 rgba(0, 58, 97, 0.25);
+	--elevation-6: 0 4px 20px 0 rgba(195, 224, 255, 0.5), 0 0 4px 0 rgba(195, 224, 255, 0.5);
+}

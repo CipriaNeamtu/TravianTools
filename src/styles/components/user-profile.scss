@@ -1,0 +1,59 @@
+@use '../flex' as *;
+@use '../breakpoints' as *;
+
+.user_profile_component {
+	.modal_content {
+		@include flex-dir-align-gap(column, center, var(--space-sm));
+		width: 100%;
+
+		&.loading {
+			height: 500px;
+			justify-content: center;
+		}
+	}
+
+	.user_info_wrapper {
+		@include flex-dir-align-gap(column, center, var(--space-sm));
+		width: 500px;
+		padding: var(--space-md);
+		border-radius: 4.444px;
+		border: 0.889px solid var(--Input-Box-Stroke-Thin, rgba(0, 0, 0, 0.15));
+		box-shadow: 0px 1.77778px 1.77778px 0px rgba(0, 0, 0, 0.10);
+
+		@include screen-mini {
+			width: 100%;
+		}
+	}
+
+	.user_photo {
+		@include flex-align-gap(center, var(--space-2xl));
+
+		@include screen-mini {
+			flex-direction: column;
+			gap: var(--space-2xs);
+		}
+	}
+
+	.row_info {
+		@include flex-align-just(flex-end, space-between);
+		width: 100%;
+
+		@include screen-mini {
+			@include flex-all(flex-start, flex-start, column, var(--space-3xs));
+		}
+	}
+
+	.user_password {
+		margin-top: var(--space-xl);
+	}
+
+	.field_update {
+		margin-top: var(--space-xs);
+	}
+
+	.edit_btn {
+		@include screen-mini {
+			align-self: flex-end;
+		}
+	}
+}

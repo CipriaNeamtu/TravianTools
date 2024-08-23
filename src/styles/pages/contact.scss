@@ -1,0 +1,59 @@
+@use '../flex' as *;
+@use '../breakpoints' as *;
+
+.contact_page {
+	@include flex-all(center, center, column, var(--space-sm));
+	margin-top: 112px;
+	
+	.contact_image {
+		width: 350px;
+	}
+
+	.contact_wrapper {
+		position: relative;
+		min-height: 540px;
+		max-width: 1024px;
+		width: 70%;
+		margin: var(--space-5xl) 0;
+		padding: var(--space-3xl);
+		border-radius: 8px;
+		box-shadow: 0px 16px 32px 0px rgba(23, 37, 76, 0.12);
+
+		@include screen-mini {
+			@include flex-align-dir(center, column);
+			width: 90%;
+			margin: 0 0 var(--space-sm);
+		}
+
+		.contact_info {
+			@include flex-dir-align-gap(column, flex-start, var(--space-3xs));
+			
+			.form_info {
+				max-width: 350px;
+			}
+		}
+
+		.contact_form {
+			@include flex-dir-align-gap(column, flex-start, var(--space-xs));
+			margin-top: var(--space-2xl);
+			width: 300px;
+
+			@include screen-mini {
+				@include flex-align(center);
+				width: 275px;
+			}
+
+			.button_component {
+				margin-top: var(--space-sm);
+			}
+		}
+
+		.contact_image {
+			position: absolute;
+			right: 40px;
+			bottom: 0;
+			width: 50%;
+			max-width: 500px;
+		}
+	}
+}

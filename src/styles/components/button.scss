@@ -1,0 +1,231 @@
+@use '../flex' as *;
+
+.button_component {
+	@include flex-inline(center, center);
+	gap: var(--space-4xs);
+	padding: 0px var(--space-lg);
+	border-radius: var(--space-3xs);
+	background-color: var(--color-pacific-blue);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	user-select: none;
+
+	&:active {
+		transform: scale(0.96);
+	}
+
+	&:hover {
+		background-color: var(--color-blue-cornflower);
+
+		&.primary_red { background-color: var(--color-red-carnation); }
+		&.primary_green { background-color: var(--color-green-niagara); }
+		&.primary_yellow { background-color: var(--color-fiery-orange); }
+		&.primary_black { background-color: var(--color-black-pearl); }
+		&.primary_grey { background-color: var(--color-dark-grey-bermuda); }
+		&.primary_white { background-color: var(--color-white-smoke); }
+		&.primary_light_blue { background-color: var(--color-light-blue-onahau); }
+		
+		&.secondary_red { background-color: var(--color-red-carnation); }
+		&.secondary_green { background-color: var(--color-green-niagara); }
+		&.secondary_yellow { background-color: var(--color-fiery-orange); }
+		&.secondary_black { background-color: var(--color-black-pearl); }
+		&.secondary_grey { background-color: var(--color-dark-grey-bermuda); }
+		&.secondary_white { background-color: var(--color-white-smoke); }
+		&.secondary_light_blue { background-color: var(--color-light-blue-onahau); }
+
+		&.text_red { 
+			.typography_component {
+				color: var(--color-red-carnation); 
+			}
+		}
+		&.text_green { 
+			.typography_component {
+				color: var(--color-green-niagara); 
+			}
+		}
+		&.text_yellow { 
+			.typography_component {
+				color: var(--color-fiery-orange); 
+			}
+		}
+		&.text_black { 
+			.typography_component {
+				color: var(--color-black-pearl); 
+			}
+		}
+		&.text_grey { 
+			.typography_component {
+				color: var(--color-dark-grey-bermuda); 
+			}
+		}
+		&.text_white { 
+			.typography_component {
+				color: var(--color-white-smoke); 
+			}
+		}
+		&.text_light_blue { 
+			.typography_component {
+				color: var(--color-light-blue-onahau); 
+			}
+		}
+	}
+
+	&.full_width {
+		width: 100%;
+	}
+
+	&.icon_left {
+		flex-direction: row-reverse;
+	}
+
+	&.primary {
+		height: 42px;
+		padding: 12px 32px;
+		flex-shrink: 0;
+		border-radius: 4px;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+		&.mini {
+			height: unset;
+			padding: 2px 16px;
+		}
+
+		&.small {
+			padding: 10px 20px 10px 20px;
+		}
+
+		&.large {
+			height: unset;
+			padding: 20px 28px;
+		}
+
+		&_red {
+			@extend .primary;
+			background-color: var(--color-radical-red);
+		}
+
+		&_green {
+			@extend .primary;
+			background-color: var(--color-observatory);
+		}
+
+		&_yellow {
+			@extend .primary;
+			background-color: var(--color-yellow-sun);
+		}
+
+		&_black {
+			@extend .primary;
+			background-color: var(--color-big-stone);
+		}
+
+		&_grey {
+			@extend .primary;
+			background-color: var(--color-dark-grey-cadet);
+		}
+
+		&_white {
+			@extend .primary;
+			background-color: var(--color-white);
+		}
+
+		&_light_blue {
+			@extend .primary;
+			background-color: var(--color-solitude);
+		}
+	}
+
+	&.secondary {
+		height: 42px;
+		padding: 12px 32px;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+		&.small {
+			padding: 10px 20px 10px 20px;
+		}
+
+		&.mini {
+			height: unset;
+			padding: 2px 16px;
+		}
+
+		&.large {
+			height: unset;
+			padding: 20px 28px;
+		}
+
+		&_red {
+			@extend .secondary;
+			background-color: var(--color-radical-red);
+		}
+
+		&_green {
+			@extend .secondary;
+			background-color: var(--color-observatory);
+		}
+
+		&_yellow {
+			@extend .secondary;
+			background-color: var(--color-yellow-sun);
+		}
+
+		&_black {
+			@extend .secondary;
+			background-color: var(--color-big-stone);
+		}
+
+		&_grey {
+			@extend .secondary;
+			background-color: var(--color-dark-grey-cadet);
+		}
+
+		&_white {
+			@extend .secondary;
+			background-color: var(--color-white);
+		}
+
+		&_light_blue {
+			@extend .secondary;
+			background-color: var(--color-solitude);
+		}
+	}
+
+	&.text {
+		background-color: transparent;
+
+		&_red {
+			@extend .text;
+			color: var(--color-radical-red);
+		}
+
+		&_green {
+			@extend .text;
+			color: var(--color-observatory);
+		}
+
+		&_yellow {
+			@extend .text;
+			color: var(--color-yellow-sun);
+		}
+
+		&_black {
+			@extend .text;
+			color: var(--color-big-stone);
+		}
+
+		&_grey {
+			@extend .text;
+			color: var(--color-dark-grey-cadet);
+		}
+
+		&_white {
+			@extend .text;
+			color: var(--color-white);
+		}
+
+		&_light_blue {
+			@extend .text;
+			color: var(--color-solitude);
+		}
+	}
+}

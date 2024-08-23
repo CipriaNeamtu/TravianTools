@@ -1,0 +1,43 @@
+
+@use '../../flex' as *;
+@use '../../breakpoints' as *;
+
+.contact_dashboard {
+	.get_list {
+		margin-top: var(--space-md);
+	}
+
+	.contact_forms {
+		@include flex-dir-align-gap(column, flex-start, var(--space-xs));
+		margin-top: var(--space-md);
+
+		.contact_form {
+			@include flex-align-just(center ,space-between);
+			border-radius: 8px;
+			box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			padding: var(--space-sm);
+			width: 40%;
+
+			@include screen-mini {
+				width: 100%;
+			}
+
+			.contact_form_buttons {
+				@include flex-gap(var(--space-xs));
+
+				.new_entry_image {
+					width: 100px;
+				}
+			}
+		}
+	}
+
+	.contact_form_details {
+		@include flex-dir-align-gap(column, flex-start, var(--space-xs));
+
+		.contact_form_detail {
+			@include flex-align-gap(center, var(--space-3xs));
+		}
+	}
+}

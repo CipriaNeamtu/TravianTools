@@ -1,0 +1,14 @@
+@use '../flex' as *;
+
+.syntax_highlighter {
+	@include flex-dir-align-gap(column, flex-start, var(--space-sm));
+
+	pre {
+		display: flex;
+		padding: var(--space-sm);
+		overflow-x: auto;
+		color: var(--color-fiord);
+		background-color: var(--color-solitude) !important;
+		border-radius: var(--space-4xs);
+	}
+}

@@ -1,0 +1,130 @@
+@use '../../flex' as *;
+@use '../../breakpoints' as *;
+
+$user_border: 1px solid var(--color-dim-grey);
+
+.users_dashboard {
+	.users_action {
+		@include flex-align-gap(center ,var(--space-xs));
+
+		@include screen-mini {
+			flex-direction: column;
+		}
+		
+		.show_users_btn {
+			margin-top: var(--space-md);
+		}
+	}
+
+	.users {
+		margin-top: var(--space-md);
+
+		.filters_wrapper {
+			padding: var(--space-sm);
+			width: 100%;
+			border-radius: var(--space-3xs);
+			background-color: var(--color-white);
+			box-shadow: -10px 32px 56px 20px rgba(0, 0, 0, 0.08);
+			margin-bottom: var(--space-md);
+
+			.filters {
+				@include flex-align-gap(flex-end, var(--space-md));
+				margin-top: var(--space-xs);
+
+				@include screen-mini {
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+			
+			.filter_buttons {
+				@include flex-gap(var(--space-xs));
+				margin-top: var(--space-md);
+			}
+		}
+
+		&.loading {
+			@include flex(center, center);
+			height: 400px;
+		}
+
+		.title_row {
+			@include flex-gap(var(--space-md));
+			padding: var(--space-3xs) var(--space-2xs);
+			border: $user_border;
+			border-bottom: none;
+
+			@include screen-mini {
+				display: none;
+			}
+		}
+
+		.user {
+			@include flex-align-gap(center, var(--space-md));
+			padding: var(--space-2xs);
+			border-top: $user_border;
+			border-right: $user_border;
+			border-left: $user_border;
+			cursor: pointer;
+	
+			&:first-child {
+				border-bottom: none;
+			}
+
+			&:last-child {
+				border-bottom: $user_border;
+			}
+
+			&:hover {
+				background: var(--color-green-cosmos);
+			}
+
+			&.new_entry {
+				background-color: var(--color-sunglow);
+			}
+
+			@include screen-mini {
+				flex-direction: column;
+				text-align: center;
+				gap: var(--space-3xs);
+			}
+		}
+
+		.nr {
+			min-width: 30px;
+			text-align: center;
+		}
+		
+		.photo_name {
+			min-width: 214px;
+		}
+
+		.name {
+			min-width: 150px;
+		}
+
+		.email {
+			min-width: 250px;
+		}
+
+		.city {
+			min-width: 125px;
+		}
+
+		.country {
+			min-width: 125px;
+		}
+
+		.role {
+			min-width: 125px;
+		}
+
+		.date {
+			min-width: 150px;
+		}
+
+		.delete_user {
+			min-width: 100px;
+		}
+	}
+}

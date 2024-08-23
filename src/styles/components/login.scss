@@ -1,0 +1,35 @@
+@use '../flex' as *;
+@use '../breakpoints' as *;
+
+.login_component {
+	.google_btn {
+		gap: var(--space-xs);
+	}
+
+	.login {
+		@include flex-dir-align-gap(column, center, var(--space-md));
+	}
+
+	.login_button {
+		margin-top: var(--space-md);
+	}
+	
+	.create_account {
+		@include flex-dir-align-gap(column, center, var(--space-3xs));
+		margin-top: var(--space-xs);
+	}
+
+	.password_hints {
+		width: 100%;
+		margin-top: var(--space-xs);
+
+		.hint {
+			@include flex-align-gap(center, var(--space-4xs));
+			margin-left: var(--space-2xl);
+		}
+	}
+
+	.login_validation {
+		margin-top: var(--space-xs);
+	}
+}

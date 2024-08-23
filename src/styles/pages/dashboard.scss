@@ -1,0 +1,45 @@
+@use '../flex' as *;
+@use '../breakpoints' as *;
+
+.admin_dashboard {
+	@include flex-direction(column);
+	width: 100%;
+	margin-top: var(--header-height);
+	padding-top: var(--space-lg);
+	
+	/* Black mode */
+	// background-color: var(--color-cinder);
+
+	.admin_dashboard_title {
+		@include flex-align-just-gap(center, center, var(--space-sm));
+		padding: var(--space-md) 0;
+		border-bottom: 1px solid var(--color-dim-grey);
+	}
+
+	.dashboard_wrapper {
+		display: flex;
+		border-bottom: 1px solid var(--color-dim-grey);
+
+		@include screen-mini {
+			flex-direction: column;
+		}
+
+		.sidebar {
+			@include flex-dir-align-gap(column, flex-start, var(--space-sm));
+			width: var(--sidebar-width);
+			min-height: 700px;
+			border-right: 1px solid var(--color-dim-grey);
+			padding: var(--space-sm);
+
+			@include screen-mini {
+				width: 100%;
+				min-height: unset;
+			}
+		}
+	}
+
+	.pages {
+		width: 100%;
+		padding: var(--space-md) var(--space-md) var(--space-5xl) var(--space-md);
+	}
+}

@@ -1,0 +1,75 @@
+@use '../../flex' as *;
+@use '../../breakpoints' as *;
+
+
+.components {
+	@include flex-gap(var(--space-5xl));
+	margin-top: var(--space-5xl);
+
+	@include screen-mini {
+		flex-direction: column;
+	}
+
+	.buttons {
+		width: 160px;
+		@include flex-dir-align-gap(column, flex-start, var(--space-sm));
+	}
+
+	.examples {
+		margin-top: 75px;
+
+		.all_types {
+			@include flex-dir-align-gap(column, flex-start, var(--space-md));
+			margin-top: var(--space-sm);
+
+			.info_points {
+				margin-top: var(--space-xl);
+			}
+			
+			.type_colors {
+				@include flex-gap(var(--space-sm));
+				flex-wrap: wrap;
+			}
+
+			.button_types {
+				@include flex-dir-align-gap(column, flex-start, var(--space-2xl));
+
+				&.variants {
+					@include flex-align-dir(center, row);
+				}
+
+				.button_type {
+					@include flex-align-gap(center, var(--space-sm));
+				}
+			}
+		}
+
+	}
+}
+
+/* ------------------------- */
+/* Admin Components Example */
+/* -------------------------*/
+
+.components_template {
+	.variants_selection {
+		@include flex-dir-align-gap(column, flex-start, var(--space-xs));
+		padding: var(--space-sm);
+		margin-top: var(--space-2xl);
+		width: auto;
+		min-width: 360px;
+		border-radius: var(--space-3xs);
+
+		.dropdowns {
+			@include flex-gap(var(--space-md));
+
+			@include screen-mini {
+				flex-direction: column;
+			}
+		}
+	}
+
+	.example {
+		margin-top: var(--space-sm);
+	}
+}

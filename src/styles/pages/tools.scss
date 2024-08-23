@@ -1,0 +1,112 @@
+@use '../flex' as *;
+@use '../breakpoints' as *;
+
+.my_dashboard_page {
+	display: flex;
+	margin-top: var(--header-height);
+	background: var(--color-alice-blue);
+	height: auto;
+
+	.sidebar {
+		@include flex-align-dir(center, column);
+		width: var(--sidebar-width);
+		height: auto;
+		min-width: var(--sidebar-width);
+		background: var(--color-white);
+
+		@include screen-mini {
+			display: none;
+		}
+		
+		.title {
+			width: 100%;
+			padding: var(--space-5xl) 0;
+			border-bottom: 1px solid var(--color-alice-blue);
+		}
+
+		.sidebar_buttons {
+			@include flex-dir-align-gap(column, center, var(--space-2xs));
+			width: 100%;
+			margin: var(--space-md) 0;
+			padding: 0 var(--space-xs);
+		}
+	}
+
+
+	.my_dashboard {
+		@include flex-direction(column);
+		width: 100%;
+		padding: var(--space-3xl) var(--space-sm) var(--space-3xl) var(--space-sm);
+
+		.title_nav {
+			@include flex-align-just(center, space-between);
+			
+			.icon_component {
+				margin-right: var(--space-3xs);
+			}
+		}
+
+		.mobile_buttons {
+			@include flex-dir-align-gap(column, center, var(--space-2xs));
+			margin: var(--space-md) 0;
+			padding: 0 var(--space-xs);
+			width: 65%;
+			align-self: center;
+		}
+
+		.my_dashboard_wrapper {
+			@include flex-direction(column);
+
+			@include screen-mini {
+				flex-direction: column-reverse;
+			}
+	
+			.user_profile {
+				width: 400px;
+				max-height: 335px;
+	
+				@include screen-mini {
+					width: auto;
+				}
+	
+				.user_photo {
+					@include flex-align-gap(center ,var(--space-sm));
+					margin-top: var(--space-xs);
+				}
+	
+				.user_info {
+					@include flex-align-gap(center, var(--space-2xs));
+					margin: var(--space-xs) 0 0 var(--space-xs);
+				}
+			}
+		}
+
+		.logged_info {
+			width: 700px;
+			padding: 100px;
+
+			@include screen-mini {
+				width: auto;
+				padding: var(--space-2xs);
+			}
+			
+			.my_dashboard_login_btn {
+				margin-top: var(--space-sm);
+				
+				@include screen-mini {
+					display: flex;
+				}
+			}
+		}
+	}
+
+	.dashboard_card {
+		border-radius: var(--space-sm);
+		padding: 20px;
+		background: var(--color-white);
+	}
+
+	.npc_calculator_component {
+		margin-top: var(--space-xl);
+	}
+}

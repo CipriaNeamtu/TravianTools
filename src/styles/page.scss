@@ -1,0 +1,41 @@
+@use 'breakpoints' as *;
+
+.page {
+    display: flex;
+	max-width: 100%;
+	margin: var(--space-md) var(--space-md) var(--space-footer);
+
+    &.display_block {
+		display: block;
+	}
+
+	&.display_grid {
+		display: grid;
+	}
+
+	@include screen-large {
+		&.small_container {
+			max-width: var(--small-container);
+			margin: var(--space-3xl) auto var(--space-footer) auto;
+		}
+	}
+
+	@include screen-extra-large {
+		max-width: var(--extra-large-container);
+		margin: var(--space-3xl) auto var(--space-footer) auto;
+		
+		// Will set the top margin to 36px for screens > 1200px
+		&.top_spacer_md {
+			margin: 36px auto var(--space-footer) auto;
+		}
+
+		// Will set the top & bottom margins to 32px for screens > 1200px
+		&.top_bottom_spacer_2xl {
+			margin: var(--space-2xl) auto;
+		}
+	}
+	
+	@include screen-mega-large {
+		max-width: var(--mega-large-container);
+	}
+}

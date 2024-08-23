@@ -1,0 +1,196 @@
+@use '../../flex' as *;
+@use '../../breakpoints' as *;
+
+.army_cost_component {
+	@include flex-direction(row);
+	// margin-top: var(--space-xl);
+	cursor: pointer;
+
+	.army_cost_table_wrapper {
+		display: flex;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		// overflow: auto;
+		text-align: center;
+
+		@include screen-mini {
+			max-width: unset;
+		}
+
+		&.column_small {
+			width: 200px;
+		}
+
+		.army_cost_table {
+			width: 100%;
+			border: 1px solid var(--color-light-blue-onahau);
+			border-radius: 5px;
+			border-collapse: collapse;
+
+			.hide_thead {
+				display: none;
+			}
+
+			thead {
+				background-color: var(--color-solitude);
+				height: 75px;
+
+				th {
+					padding: 8px;
+					font-weight: normal;
+					text-align: center;
+					font-size: 14px;
+				}
+			}
+
+			tbody {
+				background-color: var(--color-white);
+
+				tr:hover {
+					background-color: var(--color-light-blue-onahau);
+				}
+
+				td {
+					padding: 4px;
+					text-align: center;
+					font-size: 12px;
+					border-bottom: 1px solid var(--color-light-blue-onahau);
+					// width: 50%;
+					height: 75px;
+
+					svg {
+						height: 15px;
+					}
+
+					@include screen-mini {
+						padding: var(--space-5xs);
+						max-width: 50px;
+					}
+				}
+
+				.tribes {
+					min-width: 145px;
+					max-width: 145px;
+					margin-left: var(--space-sm);
+				}
+
+				.troops {
+					max-width: 200px;
+					min-width: 200px;
+				}
+
+				.troop_cost_input {
+					width: 100px;
+					min-width: 100px;
+				}
+
+				.resources {
+					max-width: 80px;
+					min-width: 80px;
+				}
+
+				.onlyLCI_cost {
+					width: 80px;
+					min-width: 80px;
+				}
+
+				.troop_total_cost {
+					width: 80px;
+					min-width: 80px;
+				}
+
+				.troop_attack {
+					width: 80px;
+					min-width: 80px;
+				}
+
+				.troop_infantryDeff {
+					width: 80px;
+					min-width: 80px;
+				}
+
+				.troop_cavalaryDeff {
+					width: 80px;
+					min-width: 80px;
+				}
+
+				.troop_fieldSpeed {
+					width: 80px;
+					min-width: 80px;
+				}
+
+				.troop_carry {
+					width: 80px;
+					min-width: 80px;
+				}
+
+				.troop_consumption {
+					width: 80px;
+					min-width: 80px;
+				}
+			}
+		}
+	}
+	
+	.selectors_wrapper {
+		@include flex-align-gap(center, var(--space-md));
+
+		@include screen-mini {
+			width: 100%;
+			min-width: unset;
+			flex-direction: column;
+			align-items: unset;
+		}
+	}
+
+	.troops_selectors {
+		@include flex-align-gap(center, var(--space-md));
+		width: 465px;
+		padding-top: 17px;
+
+		@include screen-mini {
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+
+	.troops_number {
+		@include flex-align-gap(center, var(--space-md));
+		width: 310px;
+
+		@include screen-mini {
+			flex-direction: column;
+			width: 100%;
+
+			.input_components {
+				max-width: 142px;
+			}
+		}
+	}
+
+	.add_new_selectors {
+		padding-top: 20px;
+	}
+
+	.troop_powers {
+		@include flex-dir-align-gap(column ,flex-start, var(--space-3xs));
+		margin-top: var(--space-md);
+		cursor: pointer;
+	}
+
+	.cost_result {
+		@include flex-dir-align-gap(column ,flex-start, var(--space-2xs));
+		margin-top: var(--space-md);
+
+		.resource_cost {
+			@include flex-align-gap(center, var(--space-xs));
+
+			.copy_btn {
+				padding: var(--space-5xs);
+			}
+		}
+
+		.only_lci {
+			margin: var(--space-2xs) 0;
+		}
+	}
+}

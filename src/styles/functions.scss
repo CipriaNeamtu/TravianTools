@@ -1,0 +1,66 @@
+@function getSize($size) {
+    @return #{map-get($sizes, $size)};
+  }
+  
+  
+  @function ratio($n1, $n2){
+    @return $n1 / $n2 * 100;
+  }
+  @function ratioW($n){
+    @return ratio($n, 1920);
+  }
+  @function ratioH($n){
+    @return ratio($n, 1080);
+  }
+  
+  @function ratioPercent($n1, $n2){
+    @return $n1 / $n2 * 100 + '%';
+  }
+  
+  @function ratioVW($n1, $n2){
+    @return calc(#{($n1 / $n2 * 100)} * var(--vw));
+  }
+  @function ratioVH($n1, $n2){
+    @return $n1 / $n2 * 100 + vh;
+  }
+  
+  @function ratioVMax($n1, $n2){
+    @return $n1 / $n2 * 100 + vmax;
+  }
+  @function ratioVMin($n1, $n2){
+    @return $n1 / $n2 * 100 + vmin;
+  }
+  
+  @function ratioPx($n1, $n2){
+    @return $n1 / $n2 * 100 + px;
+  }
+  
+  @function ratioRem($n1){
+    @return $n1 / 16 + rem;
+  }
+  
+  
+  
+  @function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @function rem($size, $base: $min-font-size) {
+      @if (type-of($size) == number) {
+          @if (unit($size) != "px") {
+              @error "`#{$size}` needs to be a pixel value.";
+          }
+      } @else {
+          @error "`#{$size}` needs to be a number.";
+      }
+  
+      @if (type-of($base) == number) {
+          @if (unit($base) != "px") {
+              @error "`#{$base}` needs to be a pixel value.";
+          }
+      } @else {
+          @error "`#{$base}` needs to be a number.";
+      }
+  
+      @return ($size / $base) * 1rem;
+  }

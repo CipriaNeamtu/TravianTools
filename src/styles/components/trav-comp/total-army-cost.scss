@@ -1,0 +1,21 @@
+@use '../../flex' as *;
+@use '../../breakpoints' as *;
+
+.total_army_cost_component {
+	@include flex-direction(column);
+	margin-top: var(--space-xl);
+
+	.army_cost_components {
+		position: relative;
+		@include flex-direction(column);
+
+		@include screen-mini {
+			flex-direction: column;
+		}
+	}
+
+	.add_new_line {
+		width: 200px;
+		margin: var(--space-lg) 0;
+	}
+}

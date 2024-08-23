@@ -1,0 +1,86 @@
+@use '../../flex' as *;
+@use '../../breakpoints' as *;
+
+.army_production_component {
+	margin-top: var(--space-xl);
+
+	.ap_selectors {
+		@include flex-gap(var(--space-xs));
+		flex-wrap: wrap;
+		margin-top: var(--space-xl);
+
+		@include screen-mini {
+			flex-direction: column;
+		}
+	}
+
+	.inline_alert_component {
+		margin-top: var(--space-md);
+	}
+
+	.trainig_time {
+		margin: 0  0 var(--space-sm) var(--space-sm);
+	}
+
+	.table_wrapper {
+		margin-top: var(--space-xl);
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		max-width: 75%;
+		overflow: auto;
+
+		@include screen-mini {
+			max-width: unset;
+		}
+
+		.army_prod_title {
+			@include flex-gap(var(--space-3xs));
+			font-weight: bold;
+			font-size: 24px;
+			color: #333;
+			margin: var(--space-md) 0 var(--space-md) var(--space-2xs);
+
+			@include screen-mini {
+				gap: var(--space-2xs);
+			}
+		}
+
+		.army_production_table {
+			width: 100%;
+			border-collapse: collapse;
+
+			thead {
+				background-color: #f2f2f2;
+
+				th {
+					padding: 10px;
+					font-weight: bold;
+					text-align: center;
+					border-bottom: 2px solid #ddd;
+				}
+			}
+
+			tbody {
+				tr:nth-child(even) {
+					background-color: #f9f9f9;
+				}
+
+				tr:hover {
+					background-color: #e5e5e5;
+				}
+
+				td {
+					padding: 10px;
+					border-bottom: 1px solid #ddd;
+					text-align: center;
+
+					@include screen-mini {
+						padding: var(--space-5xs);
+						max-width: 50px;
+					}
+				}
+			}
+		}
+	}
+}

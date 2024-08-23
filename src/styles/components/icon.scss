@@ -1,0 +1,30 @@
+@use '../flex' as *;
+
+.icon_component {
+	@include flex(center, center);
+	
+	&.xs {
+		width: var(--space-xs);
+		height: var(--space-xs);
+	}
+
+	&.sm {
+		width: var(--space-sm);
+		height: var(--space-sm);
+	}
+
+	&.md {
+		width: var(--space-md);
+		height: var(--space-md);
+	}
+
+	&.lg {
+		width: var(--space-lg);
+		height: var(--space-lg);
+	}
+
+	&.xl {
+		width: var(--space-xl);
+		height: var(--space-xl);
+	}
+}

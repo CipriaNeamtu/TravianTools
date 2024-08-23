@@ -1,0 +1,89 @@
+/* Main SCSS */
+@use './page';
+@use './colors';
+@use './helpers';
+@use './variables';
+@use './breakpoints';
+@use './globals';
+@use './flex.scss';
+
+
+/* Main Components */
+@use './components/nav';
+@use './components/footer';
+
+
+/* Components */
+@use './components/typography';
+@use './components/button';
+@use './components/info-cards';
+@use './components/cards';
+@use './components/input';
+@use './components/alert';
+@use './components/modal';
+@use './components/custom-modal';
+@use './components/login';
+@use './components/profile-picture';
+@use './components/user-profile';
+@use './components/mini-button';
+@use './components/table';
+@use './components/dropdown';
+@use './components/syntax';
+@use './components/icon';
+@use './components/loader';
+@use './components/textarea';
+@use './components/inline-alert';
+@use './components/sidebar_button_component';
+
+/* Components/ Trav Components */
+@use './components/trav-comp/npc-calculator';
+@use './components/trav-comp/total-army-cost';
+@use './components/trav-comp/army-cost';
+@use './components/trav-comp/army-production';
+@use './components/trav-comp/resources-manager';
+@use './components/trav-comp/culture-points.scss';
+
+/* Pages */
+@use './pages/home';
+@use './pages/about';
+@use './pages/dashboard';
+@use './pages/contact';
+@use './pages/tools';
+
+
+/* Admins Pages */
+@use './pages/adminDashboard/components';
+@use './pages/adminDashboard/users';
+@use './pages/adminDashboard/subscribers';
+@use './pages/adminDashboard/contact-forms';
+
+
+
+/* FONT POPPINS LIGHT */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Font/Poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* FONT POPPINS REGULAR */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Font/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+// /* FONT POPPINS BOLD */
+// @font-face {
+//     font-family: 'Poppins';
+//     src: url('../Font/Poppins/Poppins-Bold.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+

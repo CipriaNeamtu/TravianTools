@@ -1,0 +1,28 @@
+@use '../flex' as *;
+@use '../breakpoints' as *;
+
+.info_cards {
+    @include flex-justify(space-between);
+    width: var(--large-container);
+
+    @include screen-mini {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+    }
+
+    .card {
+        @include flex-align-dir(center, column);
+        width: 360px;
+        padding: var(--space-md) var(--space-5xl) var(--space-sm) var(--space-5xl);
+        flex-shrink: 0;
+
+        .subtitle {
+            margin-top: var(--space-3xs);
+        }
+
+        .description {
+            margin-top: var(--space-xs);
+        }
+    }
+}

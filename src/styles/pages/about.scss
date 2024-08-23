@@ -1,0 +1,34 @@
+@use '../flex' as *;
+
+.about_page {
+	@include flex-all(center, center, column, var(--space-sm));
+	margin-top: var(--header-height);
+	padding: 100px var(--space-md);
+
+	.team {
+		@include flex-align-dir(center, column);
+		margin-top: var(--space-5xl);
+
+		.profile_picture_component {
+			margin-top: var(--space-md);
+
+			img {
+				width: 125px;
+			}
+		}
+
+		.name {
+			margin-top: var(--space-2xs);
+		}
+
+		.description {
+			@include flex-dir-align-gap(column, flext-start, var(--space-sm));
+			margin-top: var(--space-2xl);
+			max-width: 1000px;
+
+			.note {
+				margin-bottom: var(--space-xl);
+			}
+		}
+	}
+}
